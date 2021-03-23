@@ -4,12 +4,13 @@ class Board
   def initialize
     @square = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
-  def create_board 
-    puts "-----+-----+-----"
+
+  def create_board
+    puts '-----+-----+-----'
     puts "[ #{@square[0]} ] [ #{@square[1]} ] [ #{@square[2]} ]"
     puts "[ #{@square[3]} ] [ #{@square[4]} ] [ #{@square[5]} ]"
     puts "[ #{@square[6]} ] [ #{@square[7]} ] [ #{@square[8]} ]"
-    puts "-----+-----+-----"
+    puts '-----+-----+-----'
   end
 end
 
@@ -20,13 +21,12 @@ class Player
 end
 
 player1 = Player.new(@name)
-puts "enter player one name?"
+puts 'enter player one name?'
 player1 = gets.chomp
- 
-player2 = Player.new(@name)
-puts "enter player two name?"
-player2 = gets.chomp
 
+player2 = Player.new(@name)
+puts 'enter player two name?'
+player2 = gets.chomp
 
 board = Board.new
 
@@ -37,39 +37,34 @@ puts "#{player1} will be X"
 puts "#{player2} will be O"
 
 loop do
-  system "cls"
+  system 'cls'
   puts board.create_board
   puts "It's #{player1} turn"
-  puts ""
-  puts " Select an available cell"
+  puts ''
+  puts ' Select an available cell'
   input = gets.chomp.to_i
   if input <= 0 or input > 9
-    system "cls"
+    system 'cls'
     puts board.create_board
-    puts "This would catch invalid inputs and reset the loop"
+    puts 'This would catch invalid inputs and reset the loop'
   end
   puts "It's #{player2} turn"
-  puts ""
+  puts ''
   input = gets.chomp.to_i
   if input <= 0 or input > 9
-    system "cls"
+    system 'cls'
     puts board.create_board
-    puts "This would catch invalid inputs and reset the loop"
+    puts 'This would catch invalid inputs and reset the loop'
   end
-  puts "Now another class would check the win condition here or if every space on the board was occupied it'd display a draw"
+  puts 'Check winner an drawing conditions'
   puts "Enter 9 to win and 8 to draw or anything else to loop back to player1's turn"
   input = gets.chomp.to_i
-  if input == 9
+  case input
+  when 9
     puts "#{player1} is the winner"
     break
-  elsif input == 8
+  when 8
     puts "It's a DRAW!"
     break
   end
 end
-
-
-
-
-
-
