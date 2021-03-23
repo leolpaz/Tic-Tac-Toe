@@ -12,6 +12,14 @@ class Board
     puts "[ #{@square[6]} ] [ #{@square[7]} ] [ #{@square[8]} ]"
     puts '-----+-----+-----'
   end
+
+  def check_valid_move(input)
+    @input = input
+    if !@square.include?(input)
+      system 'cls'
+      puts "Please use a valid number"
+    end
+  end
 end
 
 class Player
@@ -43,28 +51,14 @@ loop do
   puts ''
   puts ' Select an available cell'
   input = gets.chomp.to_i
-  if input <= 0 or input > 9
-    system 'cls'
-    puts board.create_board
-    puts 'This would catch invalid inputs and reset the loop'
-  end
+  board.check_valid_move(input)
+  system 'cls'
+  puts board.create_board
   puts "It's #{player2} turn"
   puts ''
   input = gets.chomp.to_i
-  if input <= 0 or input > 9
-    system 'cls'
-    puts board.create_board
-    puts 'This would catch invalid inputs and reset the loop'
-  end
-  puts 'Check winner an drawing conditions'
-  puts "Enter 9 to win and 8 to draw or anything else to loop back to player1's turn"
-  input = gets.chomp.to_i
-  case input
-  when 9
-    puts "#{player1} is the winner"
-    break
-  when 8
-    puts "It's a DRAW!"
-    break
-  end
+  board.check_valid_move(input)
+  system 'cls'
+  puts board.create_board
+  break
 end
