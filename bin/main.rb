@@ -13,10 +13,21 @@ class Board
   end
 end
 
+class Player
+  attr_accessor :name
+end
 
-
+player1 = Player.new
+puts "enter player one name?"
+name = gets
+ 
+player2 = Player.new
+puts "enter player two name?"
+name = gets
 
 
 board = Board.new
 
 puts board.create_board
+
+
