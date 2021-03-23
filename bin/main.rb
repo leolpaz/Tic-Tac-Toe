@@ -14,20 +14,55 @@ class Board
 end
 
 class Player
-  attr_accessor :name
+  def initialize(name)
+    @name = name.to_s
+  end
 end
 
-player1 = Player.new
+class PlayerChoice
+  attr_accessor :cell
+  #def initialize(cell)
+   # @cell = cell.to_i
+  #end
+end
+
+player1 = Player.new(@name)
 puts "enter player one name?"
-name = gets
+player1 = gets.chomp
  
-player2 = Player.new
+player2 = Player.new(@name)
 puts "enter player two name?"
-name = gets
+player2 = gets.chomp
 
 
 board = Board.new
 
 puts board.create_board
+
+puts "#{player1} will be X"
+
+puts "#{player2} will be O"
+
+loop do
+  system "cls"
+  puts board.create_board
+  puts "It's #{player1} turn"
+  puts ""
+  puts " Select an available cell"
+  cell1 = PlayerChoice.new
+  cell1.cell = gets.chomp
+  puts "It's #{player2} turn"
+  puts ""
+  puts " Select an available cell"
+  cell2 = PlayerChoice.new
+  cell2.cell = gets.chomp
+  puts cell1
+  puts cell2
+  break
+end
+
+
+
+
 
 
