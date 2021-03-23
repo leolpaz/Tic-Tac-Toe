@@ -42,14 +42,30 @@ loop do
   puts "It's #{player1} turn"
   puts ""
   puts " Select an available cell"
-  cell1 = Win.new(gets)
+  input = gets.chomp.to_i
+  if input <= 0 or input > 9
+    system "cls"
+    puts board.create_board
+    puts "This would catch invalid inputs and reset the loop"
+  end
   puts "It's #{player2} turn"
   puts ""
-  puts " Select an available cell"
-  cell2 = Win.new(gets)
-  puts cell1
-  puts cell2
-  break
+  input = gets.chomp.to_i
+  if input <= 0 or input > 9
+    system "cls"
+    puts board.create_board
+    puts "This would catch invalid inputs and reset the loop"
+  end
+  puts "Now another class would check the win condition here or if every space on the board was occupied it'd display a draw"
+  puts "Enter 9 to win and 8 to draw or anything else to loop back to player1's turn"
+  input = gets.chomp.to_i
+  if input == 9
+    puts "#{player1} is the winner"
+    break
+  elsif input == 8
+    puts "It's a DRAW!"
+    break
+  end
 end
 
 
