@@ -19,13 +19,6 @@ class Player
   end
 end
 
-class PlayerChoice
-  attr_accessor :cell
-  #def initialize(cell)
-   # @cell = cell.to_i
-  #end
-end
-
 player1 = Player.new(@name)
 puts "enter player one name?"
 player1 = gets.chomp
@@ -49,13 +42,11 @@ loop do
   puts "It's #{player1} turn"
   puts ""
   puts " Select an available cell"
-  cell1 = PlayerChoice.new
-  cell1.cell = gets.chomp
+  cell1 = Win.new(gets)
   puts "It's #{player2} turn"
   puts ""
   puts " Select an available cell"
-  cell2 = PlayerChoice.new
-  cell2.cell = gets.chomp
+  cell2 = Win.new(gets)
   puts cell1
   puts cell2
   break
