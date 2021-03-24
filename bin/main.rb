@@ -30,7 +30,6 @@ while board.game
     input = gets.chomp.to_i
     board.check_valid_move(input)
   end
-  board.check_win(input)
   system 'clear'
   system 'cls'
   board.valid = false
@@ -41,7 +40,6 @@ while board.game
     input = gets.chomp.to_i
     board.check_valid_move(input)
   end
-  board.check_win(input)
   board.valid = false
   system 'clear'
   system 'cls'
