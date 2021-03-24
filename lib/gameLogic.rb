@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 class Board
-  attr_accessor :game, :valid, :square
+  attr_accessor :valid, :square
+  attr_reader :game
 
   def initialize
     @square = [1, 2, 3, 4, 5, 6, 7, 8, 9]

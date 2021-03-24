@@ -51,6 +51,8 @@ while board.game
   system 'cls'
   board.valid = false
   until board.valid
+    system 'clear'
+    system 'cls'
     puts board.create_board
     puts "It's #{player2.name} turn"
     puts ''
@@ -69,5 +71,4 @@ while board.game
   system 'clear'
   system 'cls'
   puts board.create_board
-  puts board.square
 end
