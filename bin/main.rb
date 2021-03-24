@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/gameLogic'
+require_relative '../lib/game_logic'
 
 puts 'enter player one name?'
 player1 = Player.new('X')
