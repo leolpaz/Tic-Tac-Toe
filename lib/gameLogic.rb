@@ -34,14 +34,12 @@ class Board
 
   def win(player)
     win = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]]
-    win.each{|arr| return true if win_check(arr, player.letter)}
+    win.each { |arr| return true if win_check(arr, player.letter) }
     false
   end
 
   def draw
-    if @square.none?(Integer)
-      return true
-    end
+    return true if @square.none?(Integer)
   end
 end
 
