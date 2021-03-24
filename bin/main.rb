@@ -36,10 +36,14 @@ while board.game
     board.check_valid_move(input)
   end
   board.square[input - 1] = player1.letter
-  if board.win(player1) == 'draw'
+  system 'cls'
+  system 'clear'
+  puts board.create_board
+  if board.draw
     puts "It's a draw!"
     break
-  elsif board.win(player1)
+  end
+  if board.win(player1)
     puts "#{player1.name} is the WINNER"
     break
   end
@@ -54,6 +58,9 @@ while board.game
     board.check_valid_move(input)
   end
   board.square[input - 1] = player2.letter
+  system 'cls'
+  system 'clear'
+  puts board.create_board
   if board.win(player2)
     puts "#{player2.name} is the WINNER"
     break

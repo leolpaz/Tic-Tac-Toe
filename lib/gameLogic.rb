@@ -28,34 +28,19 @@ class Board
     end
   end
 
+  def win_check(arr, letter)
+    return true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
+  end
+
   def win(player)
-    win = [[0, 1, 2]]
-    if @square[0] == player.letter and @square[1] == player.letter and @square[2] == player.letter
-      system 'cls'
-      true
-    elsif @square[3] == player.letter and @square[4] == player.letter and @square[5] == player.letter
-      system 'cls'
-      true
-    elsif @square[6] == player.letter and @square[7] == player.letter and @square[8] == player.letter
-      system 'cls'
-      true
-    elsif @square[0] == player.letter and @square[3] == player.letter and @square[6] == player.letter
-      system 'cls'
-      true
-    elsif @square[1] == player.letter and @square[4] == player.letter and @square[7] == player.letter
-      system 'cls'
-      true
-    elsif @square[2] == player.letter and @square[5] == player.letter and @square[8] == player.letter
-      system 'cls'
-      true
-    elsif @square[2] == player.letter and @square[4] == player.letter and @square[6] == player.letter
-      system 'cls'
-      true
-    elsif @square[0] == player.letter and @square[4] == player.letter and @square[8] == player.letter
-      system 'cls'
-      true
-    elsif @square.none?(Integer)
-      'draw'
+    win = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]]
+    win.each{|arr| return true if win_check(arr, player.letter)}
+    false
+  end
+
+  def draw
+    if @square.none?(Integer)
+      return true
     end
   end
 end
@@ -69,8 +54,3 @@ class Player
     @letter = letter
   end
 end
-
-# create a way to record previous player choices
-# create a way to check if the player choices match a win condition
-# create a way to check draw condition
-#
