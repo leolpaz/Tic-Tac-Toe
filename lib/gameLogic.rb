@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 class Board
   attr_accessor :game, :valid
 
@@ -29,3 +28,11 @@ class Board
     end
   end
 end
+
+class Player
+  attr_accessor :name
+ def initialize
+  @name = ""
+ end
+end 
+

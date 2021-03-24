@@ -3,9 +3,14 @@
 require_relative '../lib/gameLogic'
 
 puts 'enter player one name?'
-player1 = gets.chomp.to_s
+player1 = Player.new
+player1.name = gets.chomp
+
+
 puts 'enter player two name?'
-player2 = gets.chomp.to_s
+player2 = Player.new
+player2.name = gets.chomp
+
 
 board = Board.new
 
@@ -14,9 +19,9 @@ system 'cls'
 
 puts board.create_board
 
-puts "#{player1} will be X"
+puts "#{player1.name} will be X"
 
-puts "#{player2} will be O"
+puts "#{player2.name} will be O"
 
 sleep 1
 
@@ -25,7 +30,7 @@ while board.game
   system 'cls'
   until board.valid
     puts board.create_board
-    puts "It's #{player1} turn"
+    puts "It's #{player1.name} turn"
     puts ''
     input = gets.chomp.to_i
     board.check_valid_move(input)
@@ -35,7 +40,7 @@ while board.game
   board.valid = false
   until board.valid
     puts board.create_board
-    puts "It's #{player2} turn"
+    puts "It's #{player2.name} turn"
     puts ''
     input = gets.chomp.to_i
     board.check_valid_move(input)
@@ -44,4 +49,5 @@ while board.game
   system 'clear'
   system 'cls'
   puts board.create_board
+  break
 end
