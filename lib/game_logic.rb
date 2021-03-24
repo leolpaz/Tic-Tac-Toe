@@ -29,7 +29,7 @@ class Board
   private
 
   def win_check(arr, letter)
-    return true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
+    true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
   end
 
   public
@@ -41,7 +41,7 @@ class Board
   end
 
   def draw
-    return true if @square.none?(Integer)
+    true if @square.none?(Integer)
   end
 end
 
