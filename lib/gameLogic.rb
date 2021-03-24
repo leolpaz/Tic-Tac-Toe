@@ -28,6 +28,12 @@ class Board
       @valid = true
     end
   end
+
+ def win 
+  win = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+  win.map{|a| winner = player if win[0] == player.letter}
+ end 
+
 end
 
 class Player < Board
@@ -41,9 +47,6 @@ end
 
 
 =begin
-  
-assign X and O to player 1 and 2
-replace X and O based on player choice in the @square array
 figure out the win conditions
 create a way to record previous player choices
 create a way to check if the player choices match a win condition
