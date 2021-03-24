@@ -1,5 +1,3 @@
-#!/usr/lib/env ruby
-
 class Board
   attr_accessor :valid, :square
   attr_reader :game
