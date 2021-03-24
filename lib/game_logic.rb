@@ -26,14 +26,6 @@ class Board
     end
   end
 
-  private
-
-  def win_check(arr, letter)
-    true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
-  end
-
-  public
-
   def win(player)
     win = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]]
     win.each { |arr| return true if win_check(arr, player.letter) }
@@ -42,6 +34,12 @@ class Board
 
   def draw
     true if @square.none?(Integer)
+  end
+
+  private
+
+  def win_check(arr, letter)
+    true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
   end
 end
 
