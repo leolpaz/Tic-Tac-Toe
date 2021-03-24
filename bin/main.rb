@@ -2,13 +2,19 @@
 
 require_relative '../lib/game_logic'
 
-puts 'enter player one name?'
 player1 = Player.new('X')
-player1.name = gets.chomp
-
-puts 'enter player two name?'
 player2 = Player.new('O')
-player2.name = gets.chomp
+
+while player1.name == ''
+  puts 'enter player one name?'
+  player1.name = gets.chomp
+end
+
+while player2.name == ''
+  puts 'enter player two name?'
+  player2 = Player.new('O')
+  player2.name = gets.chomp
+end
 
 board = Board.new
 
@@ -33,18 +39,21 @@ while board.game
     puts "It's #{player1.name} turn"
     puts ''
     input = gets.chomp.to_i
-    board.check_valid_move(input)
+    next unless board.check_valid_move(input) == false
+    system 'cls'
+    puts 'Please use a valid number'
+    sleep 1
   end
   board.square[input - 1] = player1.letter
   system 'cls'
   system 'clear'
   puts board.create_board
-  if board.draw
-    puts "It's a draw!"
-    break
-  end
   if board.win(player1)
     puts "#{player1.name} is the WINNER"
+    break
+  end
+  if board.draw
+    puts "It's a draw!"
     break
   end
   system 'clear'
@@ -57,7 +66,10 @@ while board.game
     puts "It's #{player2.name} turn"
     puts ''
     input = gets.chomp.to_i
-    board.check_valid_move(input)
+    next unless board.check_valid_move(input) == false
+    system 'cls'
+    puts 'Please use a valid number'
+    sleep 1
   end
   board.square[input - 1] = player2.letter
   system 'cls'

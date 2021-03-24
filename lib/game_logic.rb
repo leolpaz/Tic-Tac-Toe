@@ -1,6 +1,6 @@
 class Board
-  attr_accessor :valid, :square
-  attr_reader :game
+  attr_accessor :valid
+  attr_reader :game, :square
 
   def initialize
     @square = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -9,28 +9,30 @@ class Board
   end
 
   def create_board
-    puts '-----+-----+-----'
-    puts "[ #{@square[0]} ] [ #{@square[1]} ] [ #{@square[2]} ]"
-    puts "[ #{@square[3]} ] [ #{@square[4]} ] [ #{@square[5]} ]"
-    puts "[ #{@square[6]} ] [ #{@square[7]} ] [ #{@square[8]} ]"
-    puts '-----+-----+-----'
+    "     -----+-----+-----
+     [ #{@square[0]} ] [ #{@square[1]} ] [ #{@square[2]} ]
+     [ #{@square[3]} ] [ #{@square[4]} ] [ #{@square[5]} ]
+     [ #{@square[6]} ] [ #{@square[7]} ] [ #{@square[8]} ]
+     -----+-----+-----"
   end
 
   def check_valid_move(input)
     @input = input
     if !@square.include?(input)
-      system 'cls'
-      puts 'Please use a valid number'
-      sleep 1
       @valid = false
+      false
     else
       @valid = true
     end
   end
 
+  private
+
   def win_check(arr, letter)
     return true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
   end
+
+  public
 
   def win(player)
     win = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]]
