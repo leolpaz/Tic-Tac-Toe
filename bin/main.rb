@@ -40,6 +40,7 @@ while board.game
     puts ''
     input = gets.chomp.to_i
     next unless board.check_valid_move(input) == false
+
     system 'cls'
     puts 'Please use a valid number'
     sleep 1
@@ -67,6 +68,7 @@ while board.game
     puts ''
     input = gets.chomp.to_i
     next unless board.check_valid_move(input) == false
+
     system 'cls'
     puts 'Please use a valid number'
     sleep 1
