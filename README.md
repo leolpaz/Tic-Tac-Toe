@@ -2,6 +2,7 @@
 
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+![screenshot](screenshot.png)
 
 # Tic Tac Toe
 
