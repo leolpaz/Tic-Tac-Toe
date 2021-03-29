@@ -1,6 +1,6 @@
 class Board
-  attr_accessor :valid
-  attr_reader :game, :square
+  attr_accessor :valid, :square
+  attr_reader :game
 
   def initialize
     @square = [1, 2, 3, 4, 5, 6, 7, 8, 9]

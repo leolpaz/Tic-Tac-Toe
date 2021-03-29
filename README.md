@@ -3,16 +3,20 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-![screenshot](screenshot.png)
-
 # Tic Tac Toe
-
-  In this project we created a copy of the tic tac toe game, to be played by 2 players using Ruby, the game follows the standard rules of tic tac toe which are explained in the rules section. Tic Tac Toe is a logical game, represented by one letter "X and O", where they take turns filling the spaces. 
-
+On this repository we run RSpec tests to make sure that all the logic methods work properly and give the correct outcome, we tested both positive and negative outcomes making sure it's working as intended.
 
 ## Built With
 
 - Ruby
+
+## How to Test our project
+
+- First type `gem install rspec`
+
+- cd into this Project directory
+
+- rspec spec/logic_testing.rb
 
 ## Setup
 
@@ -35,17 +39,23 @@
 
 ## Authors
 
-👤 **Amal Hersi**
+👤 **NSABIMANA Emmanuel**(testing)
 
-- GitHub: [@Amalcxc](https://github.com/Amalcxc)
-- Twitter: [@Amalcx4](https://twitter.com/Amalcx4)
-- LinkedIn: [Amal Hersi](https://www.linkedin.com/in/amal-hersi-a29583205/)
+- GitHub: [@emmyn5600](https://github.com/Emmyn5600)
+- Twitter: [@NSABIMA62253884](https://twitter.com/NSABIMA62253884)
+- LinkedIn: [@nsabimana-emmanuel-4276091b2](https://www.linkedin.com/in/nsabimana-emmanuel-4276091b2/)
 
-👤 **Leonardo L. da Paz**
+👤 **Leonardo L. da Paz**(original project and testing)
 
 - GitHub: [@leolpaz](https://github.com/leolpaz)
 - Twitter: [@leonardolpaz95](https://twitter.com/leonardolpaz95)
 - LinkedIn: [Leonardo Paz](https://www.linkedin.com/in/leonardo-paz-a925611b5/)
+
+👤 **Amal Hersi**(original project)
+
+- GitHub: [@Amalcxc](https://github.com/Amalcxc)
+- Twitter: [@Amalcx4](https://twitter.com/Amalcx4)
+- LinkedIn: [Amal Hersi](https://www.linkedin.com/in/amal-hersi-a29583205/)
 
 ## Acknowledgments
 
