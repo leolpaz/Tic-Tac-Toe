@@ -10,6 +10,14 @@ On this repository we run RSpec tests to make sure that all the logic methods wo
 
 - Ruby
 
+## How to Test our project
+
+- First type `gem install rspec`
+
+- cd into this Project directory
+
+- Rspec spec/logic_testing.rb
+
 ## Setup
 
 - Install git
