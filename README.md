@@ -31,17 +31,23 @@ On this repository we run rspec tests to make sure that all the logic methods wo
 
 ## Authors
 
-👤 **Amal Hersi**
+👤 **NSABIMANA Emmanuel**(testing)
 
-- GitHub: [@Amalcxc](https://github.com/Amalcxc)
-- Twitter: [@Amalcx4](https://twitter.com/Amalcx4)
-- LinkedIn: [Amal Hersi](https://www.linkedin.com/in/amal-hersi-a29583205/)
+- GitHub: [@emmyn5600](https://github.com/Emmyn5600)
+- Twitter: [@NSABIMA62253884](https://twitter.com/NSABIMA62253884)
+- LinkedIn: [@nsabimana-emmanuel-4276091b2](https://www.linkedin.com/in/nsabimana-emmanuel-4276091b2/)
 
-👤 **Leonardo L. da Paz**
+👤 **Leonardo L. da Paz**(original project and testing)
 
 - GitHub: [@leolpaz](https://github.com/leolpaz)
 - Twitter: [@leonardolpaz95](https://twitter.com/leonardolpaz95)
 - LinkedIn: [Leonardo Paz](https://www.linkedin.com/in/leonardo-paz-a925611b5/)
+
+👤 **Amal Hersi**(original project)
+
+- GitHub: [@Amalcxc](https://github.com/Amalcxc)
+- Twitter: [@Amalcx4](https://twitter.com/Amalcx4)
+- LinkedIn: [Amal Hersi](https://www.linkedin.com/in/amal-hersi-a29583205/)
 
 ## Acknowledgments
 
