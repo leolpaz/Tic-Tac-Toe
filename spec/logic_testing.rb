@@ -13,6 +13,10 @@ RSpec.describe Board do
     it 'returns false if the input is not on the array' do
       expect(board.check_valid_move(67)).to be false
     end
+
+    it 'returns false if the input is empty' do
+      expect(board.check_valid_move('')).to be false
+    end
   end
 
   describe '#draw' do
