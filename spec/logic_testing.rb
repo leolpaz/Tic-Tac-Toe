@@ -42,12 +42,12 @@ RSpec.describe Board do
       expect(board.win(player2)).to be true
     end
 
-    it 'returns false if it meets the win condition for player1' do
+    it 'return false if player1 does not meet the win condition' do
       board.square = %w[X O O O X X X X O]
       expect(board.win(player1)).to be false
     end
 
-    it 'returns false if it meets the win condition for player2' do
+    it 'return false if player2 does not meet the win condition' do
       board.square = %w[X O O O X X X X O]
       expect(board.win(player2)).to be false
     end
