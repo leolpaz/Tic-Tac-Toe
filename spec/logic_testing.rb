@@ -14,5 +14,19 @@ RSpec.describe Board do
     end
 
   end
-  
+   
+  describe '#draw' do
+    
+    it 'returns true if there is no number left to pick' do
+      board.square = ['X', 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'O']
+      expect(board.draw).to be true
+    end
+
+    it 'returns false if there are other numbers to pick' do
+    board.square = [1, 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'O']
+    expect(board.draw).to be nil
+  end
+
+end
+
 end
