@@ -3,12 +3,8 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-![screenshot](screenshot.png)
-
 # Tic Tac Toe
-
-  In this project we created a copy of the tic tac toe game, to be played by 2 players using Ruby, the game follows the standard rules of tic tac toe which are explained in the rules section. Tic Tac Toe is a logical game, represented by one letter "X and O", where they take turns filling the spaces. 
-
+On this repository we run rspec tests to make sure that all the logic methods work properly and give the correct outcome, we tested both positive and negative outcomes to make sure it's working as intended.
 
 ## Built With
 
