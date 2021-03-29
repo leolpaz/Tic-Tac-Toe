@@ -16,7 +16,7 @@ On this repository we run RSpec tests to make sure that all the logic methods wo
 
 - cd into this Project directory
 
-- Rspec spec/logic_testing.rb
+- rspec spec/logic_testing.rb
 
 ## Setup
 
