@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Tic Tac Toe
-On this repository we run rspec tests to make sure that all the logic methods work properly and give the correct outcome, we tested both positive and negative outcomes to make sure it's working as intended.
+On this repository we run RSpec tests to make sure that all the logic methods work properly and give the correct outcome, we tested both positive and negative outcomes making sure it's working as intended.
 
 ## Built With
 
